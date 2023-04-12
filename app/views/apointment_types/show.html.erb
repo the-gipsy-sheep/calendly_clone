@@ -1,0 +1,49 @@
+<div class="max-w-3xl mx-auto px-4">
+  <div class="flex items-center justify-between">
+    <h1 class="flex-1 font-bold text-3xl">Apointment_type</h1>
+
+    <div class="flex-wrap lg:flex items-center lg:space-x-3">
+      <%= link_to apointment_types_path, class: button_class(theme: "transparent") do %>
+      All Apointment_types
+      <% end %>
+      <%= link_to edit_apointment_type_path(@apointment_type), class: button_class(theme:"primary") do %>
+      Edit
+      <% end %>
+    </div>
+  </div>
+
+  <ul class="text-slate-700">
+      <li>
+        <p class="font-semibold">Name:</p>
+        <p><%= @apointment_type.name %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Location:</p>
+        <p><%= @apointment_type.location %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Description:</p>
+        <p><%= @apointment_type.description %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Color:</p>
+        <p><%= @apointment_type.color %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Duration:</p>
+        <p><%= @apointment_type.duration %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Payment required:</p>
+        <p><%= @apointment_type.payment_required %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Price:</p>
+        <p><%= @apointment_type.price %></p>
+      </li>
+      <li>
+        <p class="font-semibold">User:</p>
+        <p><%= @apointment_type.user %></p>
+      </li>
+  </ul>
+</div>

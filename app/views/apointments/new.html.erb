@@ -1,0 +1,11 @@
+<div class="max-w-3xl mx-auto px-4">
+  <% if @apointment_type.payment_required? %>
+    <h1 class="font-bold text-3xl mb-6">Schedule your apointment for <%= number_to_currency(@apointment_type.price) %></h1>
+    <%= render 'form', apointment: @apointment %>
+  <% else %>
+    <h1 class="font-bold text-3xl mb-6">Schedule your apointment</h1>
+    <%= render 'form', apointment: @apointment %>
+
+  <% end %>
+
+</div>
